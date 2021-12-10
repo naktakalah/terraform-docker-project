@@ -1,0 +1,15 @@
+[
+    {
+        "name": "test_ecs01",
+        "image": "${app_image}",
+        "cpu": 1024,
+        "memory": 1024,
+        "networkMode": "awsvpc",
+        "portMappings": [
+            {
+              "containerPort": 80,
+              "hostPort": 80
+            }
+        ]
+    }
+]
