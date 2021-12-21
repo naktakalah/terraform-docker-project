@@ -1,0 +1,19 @@
+│ Error: "terraform-20211217135052048300000002": Waiting up to 10m0s: Need at least 2 healthy instances in ASG, have 0. Most recent activity: {
+│   ActivityId: "45d5f722-bdf0-793a-8c83-8815af34fa01",
+│   AutoScalingGroupARN: "arn:aws:autoscaling:us-east-2:819396056393:autoScalingGroup:2875612b-3ce3-4412-a5c2-18e61baaba2f:autoScalingGroupName/terraform-20211217135052048300000002",
+│   AutoScalingGroupName: "terraform-20211217135052048300000002",
+│   Cause: "At 2021-12-17T13:58:01Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+│   Description: "Launching a new EC2 instance.  Status Reason: Security group sg-09ce04c299546dc23 and subnet subnet-c5d624b8 belong to different networks. Launching EC2 instance failed.",
+│   Details: "{\"Availability Zone\":\"us-east-2b\"}",
+│   EndTime: 2021-12-17 13:58:03 +0000 UTC,
+│   Progress: 100,
+│   StartTime: 2021-12-17 13:58:03.55 +0000 UTC,
+│   StatusCode: "Failed",
+│   StatusMessage: "Security group sg-09ce04c299546dc23 and subnet subnet-c5d624b8 belong to different networks. Launching EC2 instance failed."
+│ }
+│
+│   with aws_autoscaling_group.asg_node_app,
+│   on c6-02_autoscaling.tf line 14, in resource "aws_autoscaling_group" "asg_node_app":
+│   14: resource "aws_autoscaling_group" "asg_node_app" {
+│
+╵
