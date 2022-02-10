@@ -1,4 +1,5 @@
 resource "aws_security_group" "asg_sg" {
+  depends_on  = [aws_security_group.alb_sg]
   name        = "alb-inbound"
   description = "Security group for autoscaling instances"
   vpc_id      = aws_vpc.vpc_prod.id
